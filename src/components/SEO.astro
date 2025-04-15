@@ -1,0 +1,100 @@
+---
+const {
+  title,
+  titleTemplate,
+  description,
+  canonical,
+  noindex,
+  nofollow,
+  openGraph,
+  twitter,
+  jsonLd,
+  robots,
+  additionalMetaTags = [],
+  additionalLinkTags = [],
+} = Astro.props;
+
+const finalTitle = titleTemplate ? titleTemplate.replace('%s', title || '') : title;
+
+// Generate meta tags
+const metaTags = [];
+
+if (title) {
+  metaTags.push({ name: 'title', content: title });
+}
+
+if (description) {
+  metaTags.push({ name: 'description', content: description });
+}
+
+if (noindex || nofollow) {
+  const robotsContent = [
+    noindex ? 'noindex' : 'index',
+    nofollow ? 'nofollow' : 'follow'
+  ].join(', ');
+  metaTags.push({ name: 'robots', content: robotsContent });
+}
+
+// OpenGraph tags
+if (openGraph) {
+  if (openGraph.title) metaTags.push({ property: 'og:title', content: openGraph.title });
+  if (openGraph.description) metaTags.push({ property: 'og:description', content: openGraph.description });
+  if (openGraph.type) metaTags.push({ property: 'og:type', content: openGraph.type });
+  if (openGraph.image) metaTags.push({ property: 'og:image', content: openGraph.image });
+  if (openGraph.url) metaTags.push({ property: 'og:url', content: openGraph.url });
+  if (openGraph.siteName) metaTags.push({ property: 'og:site_name', content: openGraph.siteName });
+  if (openGraph.locale) metaTags.push({ property: 'og:locale', content: openGraph.locale });
+}
+
+// Twitter tags
+if (twitter) {
+  if (twitter.card) metaTags.push({ name: 'twitter:card', content: twitter.card });
+  if (twitter.site) metaTags.push({ name: 'twitter:site', content: twitter.site });
+  if (twitter.creator) metaTags.push({ name: 'twitter:creator', content: twitter.creator });
+  if (twitter.title) metaTags.push({ name: 'twitter:title', content: twitter.title });
+  if (twitter.description) metaTags.push({ name: 'twitter:description', content: twitter.description });
+  if (twitter.image) metaTags.push({ name: 'twitter:image', content: twitter.image });
+}
+
+// Robots directives
+if (robots) {
+  const directives = [];
+  if (robots.index !== undefined) directives.push(robots.index ? 'index' : 'noindex');
+  if (robots.follow !== undefined) directives.push(robots.follow ? 'follow' : 'nofollow');
+  if (robots.noarchive) directives.push('noarchive');
+  if (robots.nosnippet) directives.push('nosnippet');
+  if (robots.maxSnippet !== undefined) directives.push(`max-snippet:${robots.maxSnippet}`);
+  if (robots.maxImagePreview) directives.push(`max-image-preview:${robots.maxImagePreview}`);
+  if (robots.maxVideoPreview !== undefined) directives.push(`max-video-preview:${robots.maxVideoPreview}`);
+  
+  if (directives.length > 0) {
+    metaTags.push({ name: 'robots', content: directives.join(', ') });
+  }
+}
+
+// Add additional meta tags
+metaTags.push(...additionalMetaTags);
+
+const linkTags = [
+  ...(canonical ? [{ rel: 'canonical', href: canonical }] : []),
+  ...additionalLinkTags,
+];
+
+const jsonLdScript = jsonLd ? JSON.stringify(jsonLd, null, 2) : '';
+---
+
+{finalTitle && <title set:html={finalTitle} />}
+
+{metaTags.map((tag) => (
+  'name' in tag 
+    ? <meta name={tag.name} content={tag.content} />
+    : <meta property={tag.property} content={tag.content} />
+))}
+
+{linkTags.map((tag) => (
+  <link {...tag} />
+))}
+
+{jsonLd && (
+  <script type="application/ld+json" set:html={jsonLdScript} />
+)} 

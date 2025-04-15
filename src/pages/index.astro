@@ -1,0 +1,36 @@
+---
+import SEO from '../components/SEO.astro';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+		<SEO
+			title="Test Page"
+			description="Testing our SEO enhancer plugin"
+			openGraph={{
+				title: "Test Page",
+				description: "Testing our SEO enhancer plugin",
+				type: "website",
+				image: "https://example.com/og-image.jpg"
+			}}
+			twitter={{
+				card: "summary_large_image",
+				site: "@yourusername"
+			}}
+			jsonLd={{
+				"@type": "WebPage",
+				"name": "Test Page",
+				"description": "Testing our SEO enhancer plugin"
+			}}
+		/>
+	</head>
+	<body>
+		<h1>Testing SEO Enhancer</h1>
+		<p>Check the page source to see the generated meta tags!</p>
+	</body>
+</html>
