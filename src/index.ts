@@ -32,4 +32,4 @@ export { default as AstroSEO } from './components/SEO.astro';
 // Keep SEO export for backward compatibility
 export { default as SEO } from './components/SEO.astro';
 
-export default seoEnhancer; 
+export default seoEnhancer;
