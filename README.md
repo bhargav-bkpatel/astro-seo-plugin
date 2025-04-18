@@ -18,10 +18,10 @@ npm install astro-seo-enhancer
 
 ```astro
 ---
-import { SEO } from 'astro-seo-enhancer';
+import { AstroSEO } from 'astro-seo-enhancer';
 ---
 
-<SEO
+<AstroSEO
   title="Your Page Title"
   description="Your page description"
   openGraph={{
@@ -85,6 +85,20 @@ export default defineConfig({
     })
   ]
 });
+```
+
+## Testing
+
+To run tests:
+
+```bash
+npm test
+```
+
+For test coverage:
+
+```bash
+npm run test:coverage
 ```
 
 ## License

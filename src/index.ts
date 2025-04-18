@@ -27,7 +27,9 @@ function seoEnhancer(options: SeoEnhancerOptions = {}): AstroIntegration {
 // Re-export types
 export type { SEOProps, OpenGraphProps, TwitterCardProps, RobotsProps } from './types/index.ts';
 
-// Re-export the SEO component
+// Re-export the SEO component as AstroSEO
+export { default as AstroSEO } from './components/SEO.astro';
+// Keep SEO export for backward compatibility
 export { default as SEO } from './components/SEO.astro';
 
 export default seoEnhancer; 

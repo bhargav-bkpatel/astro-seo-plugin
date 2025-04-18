@@ -1,6 +1,7 @@
 {
-  "extends": "astro/tsconfigs/strict",
+  "extends": "@tsconfig/node18/tsconfig.json",
   "compilerOptions": {
+    "types": [],
     "module": "ESNext",
     "moduleResolution": "node",
     "target": "ESNext",
