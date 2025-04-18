@@ -1,4 +1,4 @@
-![Alt Text](https://github.com/bhargav-bkpatel/astro-seo-plugin/blob/main/public/backgroung.png)
+![Alt Text](https://github.com/bhargav-bkpatel/astro-seo-plugin/blob/main/public/background.webp)
 
 # ⚡Astro SEO Plugin
 
