@@ -1,6 +1,8 @@
-# Astro SEO Enhancer
+![Alt Text](https://github.com/bhargav-bkpatel/astro-seo-plugin/blob/main/public/backgroung.webp)
 
-A powerful SEO enhancement plugin for Astro websites that provides:
+# ⚡Astro SEO Plugin
+
+A strong and reliable Astro SEO optimization plugin made just for Astro-based websites that boosts performance, makes sites more visible to search engines, and helps developers get their sites to rank higher. It does this through smart analytics and by managing metadata. This plugin gives developers the tools they need.
 
 - ✨ Meta tags management
 - 🔍 JSON-LD structured data

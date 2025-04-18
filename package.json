@@ -1,7 +1,15 @@
 {
-  "name": "astro-seo-enhancer",
+  "name": "astro-seo-plugin",
   "version": "2.0.0",
-  "description": "A powerful SEO enhancement plugin for Astro websites",
+  "description": "A strong and reliable Astro SEO optimization plugin made just for Astro-based websites that boosts performance, makes sites more visible to search engines, and helps developers get their sites to rank higher. It does this through smart analytics and by managing metadata.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bhargav-bkpatel/astro-seo-plugin"
+  },
+  "homepage": "Coming Soon",
+  "bugs": {
+    "url": "https://github.com/bhargav-bkpatel/astro-seo-plugin/issues"
+  },
   "type": "module",
   "main": "./src/index.ts",
   "module": "./src/index.ts",
@@ -26,13 +34,12 @@
     "prepare": "npm run build:types"
   },
   "keywords": [
-    "astro",
-    "astro-component",
-    "seo",
-    "meta-tags",
-    "json-ld",
-    "open-graph",
-    "twitter-cards"
+    "astro-seo",
+    "astro-analytics",
+    "astro-plugin",
+    "aestro-content",
+    "astro-meta-tags",
+    "astro-canonical-tag"
   ],
   "author": "",
   "license": "MIT",
