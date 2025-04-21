@@ -18,16 +18,16 @@ A powerful and well-tested Astro SEO optimization plugin designed for Astro-base
 ## 📥 Installation
 
 ```bash
-npm install astro-seo-enhancer
+npm install astro-seo-plugin
 ```
 
 ## 💻 Usage
 
-To add valuable SEO tags to your Astro pages, import the ```<AstroSEO>``` component from astro-seo-enhancer, and use it in the  area of your layout or page. Set options for metadata, structured data, and robot settings to increase the visibility of your site in search engine results.
+To add valuable SEO tags to your Astro pages, import the ```<AstroSEO>``` component from astro-seo-plugin, and use it in the  area of your layout or page. Set options for metadata, structured data, and robot settings to increase the visibility of your site in search engine results.
 
 ```astro
 ---
-import { AstroSEO } from 'astro-seo-enhancer';
+import { AstroSEO } from 'astro-seo-plugin';
 ---
 
 <AstroSEO
@@ -77,11 +77,11 @@ You can configure the plugin in your `astro.config.mjs`:
 
 ```javascript
 import { defineConfig } from 'astro/config';
-import seoEnhancer from 'astro-seo-enhancer';
+import AstroSEO from 'astro-seo-plugin';
 
 export default defineConfig({
   integrations: [
-    seoEnhancer({
+    AstroSEO({
       defaultTitle: 'Your Site Name',
       defaultDescription: 'Your site description',
       siteName: 'Your Site Name',
@@ -375,8 +375,6 @@ npm create astro@latest -- --template minimal
 [![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
 ## 🚀 Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
@@ -391,8 +389,6 @@ Inside of your Astro project, you'll see the following folders and files:
 ```
 
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
 Any static assets, like images, can be placed in the `public/` directory.
 
@@ -416,7 +412,3 @@ Visit my portfolio at [Bhargav Patel](https://bkpatel.com/) to explore my work, 
 ## 🪪 License
 
 MIT
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
