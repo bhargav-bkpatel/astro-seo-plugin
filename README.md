@@ -71,28 +71,6 @@ import { AstroSEO } from 'astro-seo-plugin';
 />
 ```
 
-## 🛠️ Configuration
-
-You can configure the plugin in your `astro.config.mjs`:
-
-```javascript
-import { defineConfig } from 'astro/config';
-import AstroSEO from 'astro-seo-plugin';
-
-export default defineConfig({
-  integrations: [
-    AstroSEO({
-      defaultTitle: 'Your Site Name',
-      defaultDescription: 'Your site description',
-      siteName: 'Your Site Name',
-      siteUrl: 'https://yoursite.com',
-      defaultImage: '/default-og-image.jpg',
-      locale: 'en_US',
-    })
-  ]
-});
-```
-
 ## 📝 Supported Props
 
 <table>
