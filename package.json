@@ -1,12 +1,12 @@
 {
   "name": "astro-seo-plugin",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": "A strong and reliable Astro SEO optimization plugin made just for Astro-based websites that boosts performance, makes sites more visible to search engines, and helps developers get their sites to rank higher. It does this through smart analytics and by managing metadata.",
   "repository": {
     "type": "git",
     "url": "https://github.com/bhargav-bkpatel/astro-seo-plugin"
   },
-  "homepage": "Coming Soon",
+  "homepage": "https://astro-seo-plugin.vercel.app/",
   "bugs": {
     "url": "https://github.com/bhargav-bkpatel/astro-seo-plugin/issues"
   },
@@ -42,7 +42,7 @@
     "astro-seo",
     "astro-analytics",
     "astro-plugin",
-    "aestro-content",
+    "astro-content",
     "astro-meta-tags",
     "astro-canonical-tag"
   ],
