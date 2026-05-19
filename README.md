@@ -25,7 +25,7 @@ npm install astro-seo-plugin
 
 To add valuable SEO tags to your Astro pages, import the ```<AstroSEO>``` component from astro-seo-plugin, and use it in the  area of your layout or page. Set options for metadata, structured data, and robot settings to increase the visibility of your site in search engine results.
 
-```jsx
+```text
 ---
 import { AstroSEO } from 'astro-seo-plugin';
 ---
