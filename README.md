@@ -1,11 +1,11 @@
-![Alt Text](https://github.com/bhargav-bkpatel/astro-seo-plugin/blob/main/public/background.webp)
+![Alt Text](https://raw.githubusercontent.com/bhargav-bkpatel/astro-seo-plugin/main/public/background.webp)
 
 # ⚡Astro SEO Plugin
 
-[![npm version](https://img.shields.io/badge/npm-v9.3.1-blue)](https://www.npmjs.com/package/astro-seo-plugin)
-[![npm downloads](https://img.shields.io/badge/downloads-20k-brightgreen)](https://www.npmjs.com/package/astro-seo-plugin)
-[![TypeScript](https://img.shields.io/badge/types-TypeScript-blue)](https://www.typescriptlang.org/)
-[![Built with Astro](https://img.shields.io/badge/Built%20With-Astro-8a2be2?logo=astro&logoColor=white)](https://astro.build/)
+[![npm version](https://img.shields.io/badge/npm-v9.3.1-blue.svg)](https://www.npmjs.com/package/astro-seo-plugin)
+[![npm downloads](https://img.shields.io/badge/downloads-20k-brightgreen.svg)](https://www.npmjs.com/package/astro-seo-plugin)
+[![TypeScript](https://img.shields.io/badge/types-TypeScript-blue.svg)](https://www.typescriptlang.org/)
+[![Built with Astro](https://img.shields.io/badge/Built%20With-Astro-8a2be2.svg?logo=astro&logoColor=white)](https://astro.build/)
 
 A powerful and well-tested Astro SEO optimization plugin designed for Astro-based websites improves productivity, helps search engines find sites more , and assists developers in getting their sites to rank better. It achieves this through clever analytics and by handling metadata. This plugin provides developers with the necessary tools, and it supports both Astro 4 and Astro 5 making sure it works with the newest versions and stays compatible with up-to-date Astro features.
 
@@ -25,7 +25,7 @@ npm install astro-seo-plugin
 
 To add valuable SEO tags to your Astro pages, import the ```<AstroSEO>``` component from astro-seo-plugin, and use it in the  area of your layout or page. Set options for metadata, structured data, and robot settings to increase the visibility of your site in search engine results.
 
-```astro
+```jsx
 ---
 import { AstroSEO } from 'astro-seo-plugin';
 ---
