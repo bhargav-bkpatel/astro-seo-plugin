@@ -20,7 +20,9 @@
       "import": "./dist/index.js"
     },
     "./components/*": "./dist/components/*",
-    "./types": "./dist/types/index.js"
+    "./types": {
+      "types": "./dist/types/index.d.ts"
+    }
   },
   "files": [
     "dist",
