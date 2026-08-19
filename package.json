@@ -69,7 +69,7 @@
     "@types/ms": "^2.1.0",
     "@vitest/coverage-v8": "^4.1.11",
     "astro": "^7.2.3",
-    "esbuild": "^0.20.1",
+    "esbuild": "^0.28.2",
     "rimraf": "^5.0.5",
     "typescript": "^5.0.0",
     "vitest": "^4.1.11"
